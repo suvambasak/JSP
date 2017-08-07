@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sign in</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/javascript" href="js/bootstrap.js">
+        <style>
+        #u {
+            margin-left: 130px;
+        }
+        </style>
+        
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["email"].value;
+                var y = document.forms["myForm"]["password"].value;
+                if (x == "" && y == "") {
+                alert("Name must be filled out");
+                return false;
+                }
+            }
+        </script>
+
+</head>
+
+<body>
+	<div class="container">
+            <form class="form-horizontal" role="form" action="Login.jsp" method="post" name="myForm" onsubmit="return validateForm()">
+                <h2>Sign in</h2>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="email" placeholder="Email" class="form-control" autofocus name="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" placeholder="Password" class="form-control" name="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </div>
+                </div>
+            </form>
+            <p class="text-center" id="u"><a href="http://localhost:8080/Project/Register.html">Sign up</a></p>
+        </div>
+</body>
+</html>
